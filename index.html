@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kayes YTC</title>
+<meta name="description" content="Kayes YTC এর সোশ্যাল মিডিয়া ও যোগাযোগ: YouTube, Facebook, Instagram, TikTok ও ইমেইল।">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Kayes YTC">
+<meta property="og:description" content="আমার সাথে যুক্ত থাকুন">
+<meta property="og:image" content="logo.jpg">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --surface:#121212;
+  --line:#262626;
+  --text:#fff;
+  --muted:#a8a8a8;
+  --green:#c6f600;
+  --head:"Anek Bangla","Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+  --body:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+
+/* Hero: logo sits behind the headline */
+.hero{position:relative;overflow:hidden;text-align:center;padding:calc(56px + env(safe-area-inset-top,0px)) 24px 72px;border-bottom:6px solid var(--green)}
+.hero::before{content:"";position:absolute;inset:-20px;background:url(logo.jpg) center/cover;filter:blur(2px) saturate(1.1);opacity:.42}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.55) 55%,#000 100%)}
+.hero>*{position:relative;z-index:1}
+.avatar{width:132px;height:132px;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 5px var(--green);object-fit:cover;animation:pop .7s cubic-bezier(.2,.9,.3,1.2) both}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.1rem,8.5vw,3.6rem);line-height:1.15;margin:26px auto 0;max-width:15em;letter-spacing:-.01em;text-shadow:0 2px 24px #000}
+.hero h1 span{background:var(--green);color:#000;padding:0 .2em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{margin:16px auto 0;max-width:30em;color:#ececec;font-size:1.05rem;text-shadow:0 1px 12px #000}
+.total{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding:8px 20px;border:1px solid var(--green);border-radius:999px;background:rgba(0,0,0,.6)}
+.total strong{font-family:var(--head);font-weight:800;font-size:1.5rem;color:var(--green)}
+.total span{font-size:1rem}
+.name{margin-top:22px;font-family:var(--head);font-weight:500;font-size:1.05rem}
+.name b{color:var(--green);font-weight:800}
+@keyframes pop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+
+/* Links */
+main{max-width:980px;margin:0 auto;padding:40px 20px calc(48px + env(safe-area-inset-bottom,0px))}
+h2{font-family:var(--head);font-weight:800;font-size:1.35rem;margin:0 0 18px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:2px;background:var(--line)}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:1fr}
+.links a{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px;padding:16px 18px;min-height:68px;transition:background .2s,border-color .2s,transform .2s}
+.links a:hover{background:#1b1b1b;border-color:var(--green)}
+.links a:active{transform:scale(.98)}
+.ico{flex:none;width:44px;height:44px;border-radius:10px;background:#000;display:grid;place-items:center;border:1px solid var(--line)}
+.ico svg{width:24px;height:24px;fill:none;stroke:var(--green);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ico svg .f{fill:var(--green);stroke:none}
+.t{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.t strong{font-family:var(--head);font-weight:800;font-size:1.08rem}
+.t small{color:var(--muted);font-size:.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.go{margin-left:auto;color:var(--green);font-size:1.3rem}
+.links .primary a{border-color:var(--green);box-shadow:0 0 0 1px var(--green),0 0 28px rgba(198,246,0,.18)}
+
+footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem;padding:24px 20px calc(32px + env(safe-area-inset-bottom,0px))}
+footer .c{display:block;margin-top:6px;color:#fff}
+
+@media(min-width:700px){
+  body{font-size:18px}
+  .hero{padding-top:88px;padding-bottom:104px}
+  .avatar{width:168px;height:168px}
+  .links{grid-template-columns:1fr 1fr;gap:16px}
+  .links .primary,.links li:last-child{grid-column:1/-1}
+  main{padding-top:56px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="avatar" src="logo.jpg" alt="Kayes YTC লোগো" width="168" height="168">
+  <h1>Kayes <span>YTC</span></h1>
+  <p>আমার সাথে যুক্ত থাকুন</p>
+  <div class="total"><strong>75.5K+</strong><span>Followers</span></div>
+</header>
+
+<main>
+  <h2>আমার সোশ্যাল মিডিয়া</h2>
+  <ul class="links">
+    <li class="primary"><a href="https://youtube.com/@kayesytc?si=jXn5LZQzUrHp2Tpp" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path class="f" d="M10 9.2v5.6l4.8-2.8z"/></svg></span>
+      <span class="t"><strong>YouTube</strong><small>Kayes YTC</small></span><span class="go">›</span></a></li>
+    <li><a href="https://www.facebook.com/share/1DZuUzhEP8/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.5h2.5V21H14v-6.5h2.4l.6-3.5H14V8.8c0-.2.1-.3.3-.3z"/></svg></span>
+      <span class="t"><strong>Facebook</strong><small>Kayes YTC</small></span><span class="go">›</span></a></li>
+    <li><a href="https://www.instagram.com/kayesytc?avpt=MWg4aWNheXI3cXA2cg==" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="f" cx="17" cy="7" r="1.1"/></svg></span>
+      <span class="t"><strong>Instagram</strong><small>Kayes YTC</small></span><span class="go">›</span></a></li>
+    <li><a href="https://www.tiktok.com/@kayes.ytc?_r=1&amp;_t=ZS-9BalqdvxkGb" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M14 3v11.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3c.4 2.6 2 4.2 5 4.4"/></svg></span>
+      <span class="t"><strong>TikTok</strong><small>Kayes YTC</small></span><span class="go">›</span></a></li>
+    <li><a href="https://wa.me/8801878353051" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 20l1.2-4.2A8 8 0 1 1 8.3 18.9z"/><path d="M9.2 8.8c.3 2.6 2.7 5 5.4 5.4l1.2-1.3-2-1-.9.7c-.9-.4-1.7-1.200-2.100-2.100l.7-.9-1-2z"/></svg></span>
+      <span class="t"><strong>WhatsApp</strong><small>সরাসরি মেসেজ করুন</small></span><span class="go">›</span></a></li>
+    <li><a href="mailto:ibnekayes14@gmail.com">
+      <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
+      <span class="t"><strong>ইমেইল</strong><small>ibnekayes14@gmail.com</small></span><span class="go">›</span></a></li>
+  </ul>
+</main>
+
+<footer>আমার অফিসিয়াল সোশ্যাল মিডিয়া পেজগুলোতে আপনাকে স্বাগতম।<br><span class="c">© ২০২৬ Kayes YTC। সর্বস্বত্ব সংরক্ষিত।</span></footer>
+
+</body>
+</html>
